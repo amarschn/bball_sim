@@ -4,10 +4,13 @@ Simple bball model:
 - Each offensive player has prob function for:
 	- Score
 	- Pass
+	- Turnover
 - Each defensive player has prob function for:
 	- Steal
-- Game has XXX plays, each play has 10 actions
+- Game has 20 plays, each play has 5 actions
 """
+
+
 import random
 import pprint
 
