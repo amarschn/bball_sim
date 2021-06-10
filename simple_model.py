@@ -95,10 +95,10 @@ def game():
 	defense = teams[not offense_bool]
 
 	for p in range(POSSESSIONS):
-		print("Possession: {}".format(p))
+		print("Possession: {} - {}".format(p, offense.name))
 		player = offense.select_player()
 		for move in range(MOVES):
-			print("Move: {}".format(move))
+			print("Move: {} - {}".format(move, player.name))
 			if defense.gets_steal():
 				print("Steal!")
 				break
@@ -106,7 +106,8 @@ def game():
 				a = player.action()
 				if a == "SCORE":
 					score[offense_bool] += player.score()
-					print("Score!")
+					print("Score! - {}".format(score))
+					break
 				elif a == "PASS":
 					player = offense.select_player()
 					print("Pass!")
